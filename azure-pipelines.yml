@@ -16,7 +16,7 @@ steps:
     docker push $(dockerId)/$(imageName)
   env:
     pswd: $(Anis@1234)
-    dockerId: $(anis2k07) 
+     
 - task: PublishTestResults@2
   condition: succeededOrFailed()
   inputs:
