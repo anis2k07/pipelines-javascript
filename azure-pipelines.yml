@@ -11,7 +11,7 @@ steps:
 - script: |
     npm install
     npm test
-    docker build -f Dockerfile  $(dockerId)
+    docker build -f dockerfile -t nodedemo
     docker login -u $(anis2k07) -p $pswd
     docker push $(dockerId)/$(imageName)
   env:
