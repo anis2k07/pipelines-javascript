@@ -12,11 +12,11 @@ steps:
     docker pull ubuntu
     npm install
     npm test
-    docker build -f Dockerfile -t $(dockerId)/$(imageName) .
-    docker login -u $(dockerId) -p $pswd
-    docker push $(dockerId)/$(imageName)
+    docker build -f Dockerfile -t $(anis2k07)/$(imageName) .
+    docker login -u $(anis2k07) -p $pswd
+    docker push $(anis2k07)/$(imageName)
   env:
-    pswd: $(dockerPassword)
+    pswd: $(Anis@1234)
 
 - task: PublishTestResults@2
   condition: succeededOrFailed()
