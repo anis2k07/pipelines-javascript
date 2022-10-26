@@ -9,12 +9,11 @@ variables:
 
 steps:
 - script: |
-    docker pull ubuntu
     npm install
     npm test
-    docker build -f Dockerfile -t $(anis2k07)/$(imageName) .
+    docker build -f Dockerfile -t $(dockerId)/$(imageName) .
     docker login -u $(anis2k07) -p $pswd
-    docker push $(anis2k07)/$(imageName)
+    docker push $(dockerId)/$(imageName)
   env:
     pswd: $(Anis@1234)
 
