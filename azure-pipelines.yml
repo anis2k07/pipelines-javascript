@@ -9,6 +9,7 @@ variables:
 
 steps:
 - script: |
+    docker pull ubuntu
     npm install
     npm test
     docker build -f Dockerfile -t $(dockerId)/$(imageName) .
